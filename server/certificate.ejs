@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Commitment Certificate</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #333;
+      margin: 20px;
+      margin-top: 40px;
+    }
+
+    .certificate {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1{
+      color: #2ecc71; /* Emerald Green */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 100px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .donor-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e74c3c; /* Alizarin Red */
+      margin-bottom: 10px;
+    }
+
+    .donation-details {
+      margin-bottom: 20px;
+    }
+
+    .thank-you {
+      font-weight: bold;
+      color: #3498db; /* Peter River Blue */
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .issued-on {
+      color: #7f8c8d; /* Silver Gray */
+      font-style: italic;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>Green Commitment Certificate</h1>
+    <p>This is to recognize and celebrate the dedication of</p>
+    <div class="donor-name"><%= user.name %></div>
+    <p>who, through their generosity, has contributed</p>
+    <div class="donation-details">
+      <h3>Rs. <%= user.amount %></h3>
+      <p>towards the important cause of planting</p>
+      <h3><%= user.noOfTrees %> trees</h3>
+    </div>
+    <p>This act of green commitment demonstrates a passion for preserving our planet's natural beauty and biodiversity.</p>
+    <p class="thank-you">Thank you for your valuable support in creating a sustainable and greener world!</p>
+    <p class="issued-on">Certificate issued on <span style="color: #4caf50;"><%= new Date().toLocaleDateString() %></span></p>
+  </div>
+</body>
+</html>
