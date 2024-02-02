@@ -25,7 +25,7 @@ const FileHandler = () => {
 
         try {
             const response = await axios.post(
-                "https://certificate-generator-jcd1.onrender.com/upload",
+                "https://tree-certificate-generator.onrender.com/upload",
                 formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" },
